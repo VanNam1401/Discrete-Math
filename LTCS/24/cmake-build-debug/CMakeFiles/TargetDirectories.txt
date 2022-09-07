@@ -1,0 +1,3 @@
+D:/Workspace/Discrete Math/24/cmake-build-debug/CMakeFiles/24.dir
+D:/Workspace/Discrete Math/24/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/Workspace/Discrete Math/24/cmake-build-debug/CMakeFiles/rebuild_cache.dir
