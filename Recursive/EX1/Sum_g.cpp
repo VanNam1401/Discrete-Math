@@ -1,12 +1,11 @@
 #include <iostream>
 using namespace std;
 
-float SumOf_n(int n, float &sum)
+float SumOf_n(int n, float sum)
 {
     if (n == 1)
     {
-        //cout << sum;
-        return (float)1 / 2;
+        return (float)1/2;
     }
     else
     {
@@ -15,8 +14,7 @@ float SumOf_n(int n, float &sum)
 }
 int main()
 {
-    int n;
-    cin >> n;
-    float sum = (float)n / (n + 1);
+    int n; cin >> n;
+    float sum = (float) 1/(n * (n + 1));
     cout << SumOf_n(n, sum);
 }
