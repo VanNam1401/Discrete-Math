@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-void xoa_pt(int arr[], int n, int index)
+void xoa_pt(int arr[], int &n, int index)
 {
     for (int i = index; i < n + 1; i++)
     {
@@ -9,9 +9,8 @@ void xoa_pt(int arr[], int n, int index)
     }
     n--;
 }
-void mergeArray(int a[], int b[], int n, int m, int h)
+void mergeArray(int a[], int b[], int c[], int n, int m, int h)
 {
-    int c[h];
     for (int i = 0; i < h; i++)
     {
         if (i < n)
@@ -29,20 +28,50 @@ void mergeArray(int a[], int b[], int n, int m, int h)
         {
             xoa_pt(c, h, i + 1);
             i--;
-        }  
+        }
     }
     for (int i = 0; i < h; i++)
     {
         cout << c[i] << " ";
     }
 }
-
+void deliverArray(int a[], int b[], int n, int m)
+{
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < m; j++)
+        {
+            if (a[i] == b[j])
+            {
+                cout << a[i] << " ";
+            }
+        }
+    }
+}
+void SubtractionArray(int a[], int b[], int n, int m)
+{
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < m; j++)
+        {
+            if (a[i] != b[j])
+            {
+                cout << a[i] << " ";
+            }
+        }
+    }
+}
 int main()
 {
     int n = 5, m = 5;
-    int a[n] = {1,2,3,4,5};
-    int b[m] = {5,7,8,9,10};
+    int a[n] = {1, 2, 3, 7, 5};
+    int b[m] = {5, 7, 8, 9, 10};
     int h = n + m;
-    mergeArray(a, b, n, m, h);
+    int c[h];
+    mergeArray(a, b, c, n, m, h);
+    cout << endl;
+    deliverArray(a, b, n, m);
+    cout << endl;
+    SubtractionArray(a, b, n, m);
     return 0;
 }
