@@ -1,0 +1,60 @@
+cmake_minimum_required(VERSION 3.21)
+project(Discrete_Math)
+
+set(CMAKE_CXX_STANDARD 14)
+
+add_executable(Discrete_Math
+        algorithm/binarySearch.cpp
+        Combination/exercise1.cpp
+        Combination/exercise2.cpp
+        Combination/exercise3.cpp
+        Combination/exercise6.cpp
+        Combination/exercise7.cpp
+        Combination/exercise8.cpp
+        Combination/tempCodeRunnerFile.cpp
+        LTCS/01/main.cpp
+        LTCS/02/main.cpp
+        LTCS/07/main.cpp
+        LTCS/09/main.cpp
+        LTCS/10/main.cpp
+        LTCS/11/main.cpp
+        LTCS/12/main.cpp
+        LTCS/13/main.cpp
+        LTCS/14/main.cpp
+        LTCS/15/main.cpp
+        LTCS/16/main.cpp
+        LTCS/17/main.cpp
+        LTCS/18/main.cpp
+        LTCS/19/main.cpp
+        LTCS/20/main.cpp
+        LTCS/21/main.cpp
+        LTCS/22/main.cpp
+        LTCS/23/main.cpp
+        LTCS/24/main.cpp
+        LTCS/26/main.cpp
+        LTCS/27/main.cpp
+        LTCS/28/28.cpp
+        LTCS/01.cpp
+        LTCS/02.cpp
+        LTCS/03.cpp
+        LTCS/04.cpp
+        LTCS/05.cpp
+        LTCS/06.cpp
+        LTCS/08.cpp
+        matrix/matrix.cpp
+        recovery_system/demo1.cpp
+        recovery_system/ex1.cpp
+        recovery_system/ex2.cpp
+        Recursive/EX1/dao_nguoc_n.cpp
+        Recursive/EX1/MaxOf_n_h.cpp
+        Recursive/EX1/nhi_phan_c.cpp
+        Recursive/EX1/Sum_a.cpp
+        Recursive/EX1/Sum_b.cpp
+        Recursive/EX1/Sum_f.cpp
+        Recursive/EX1/Sum_g.cpp
+        Recursive/EX1/tempCodeRunnerFile.cpp
+        Recursive/EX1/UCLN_e.cpp
+        Recursive/Fibonacci/fibonaci_3.cpp
+        Recursive/rally.cpp
+        "Recursive/sum_uocsoOf_ n_2.cpp"
+        Recursive/thap_HN_4.cpp)
