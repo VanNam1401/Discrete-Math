@@ -1,12 +1,10 @@
 #include <stdio.h>
-#include <conio.h>
 int main()
 {
     // nhap vao n
     int n;
     printf("Nhap vao n: ");
     scanf("%d", &n);
-
     printf("\n Cac bo hoan vi la:\n");
 
     // khoi tao arr gom n phan tu
@@ -22,11 +20,11 @@ int main()
     // xu ly de in ra cac bo hoan vi tiep theo
     for (i = n - 1; i > 0; i--)
     {
-        int j;
+
         // neu gap arr[i] > arr[i - 1]
         if (arr[i] > arr[i - 1])
         {
-
+            int j;
             // tim trong bo cuoi giam dan phan tu vua du lon hon mang[i - 1] sau do swap
             for (j = n - 1; j >= i; j--)
             {
@@ -55,6 +53,6 @@ int main()
             i = n;
         }
     }
-    getch();
     return 0;
+    // hoán vị tiếp theo: hoán vị tên các bạn trong danh sách str= {B, C, Y,H} hoặc danh sách bất kì
 }
