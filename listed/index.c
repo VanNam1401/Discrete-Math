@@ -38,22 +38,22 @@ int main()
                     break;
                 }
             }
+            // dao nguoc bo cuoi
+            for (j = n - 1; j > ((n - 1 + i) / 2); j--)
+            {
+                int temp = arr[i + n - 1 - j];
+                arr[i + n - 1 - j] = arr[j];
+                arr[j] = temp;
+            }
+            // in ra cac bo hoan vi moi
+            printf("\n");
+            for (j = 0; j < n; j++)
+            {
+                printf("%d", arr[j]);
+            }
+            // i = n de khi thoat vong lap hien tai i-- thanh i = n - 1; va vong lap
+            i = n;
         }
-        // dao nguoc bo cuoi
-        for (j = n - 1; j > ((n - 1 + i) / 2); j--)
-        {
-            int temp = arr[i + n - 1 - j];
-            arr[i + n - 1 - j] = arr[j];
-            arr[j] = temp;
-        }
-        // in ra cac bo hoan vi moi
-        printf("\n");
-        for (j = 0; j < n; j++)
-        {
-            printf("%d", arr[j]);
-        }
-        // i = n de khi thoat vong lap hien tai i-- thanh i = n - 1; va vong lap
-        i = n;
     }
     getch();
     return 0;
