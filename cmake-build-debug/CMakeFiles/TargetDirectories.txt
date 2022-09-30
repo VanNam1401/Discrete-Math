@@ -1,3 +1,0 @@
-D:/Workspace/Discrete-Math/cmake-build-debug/CMakeFiles/Discrete_Math.dir
-D:/Workspace/Discrete-Math/cmake-build-debug/CMakeFiles/edit_cache.dir
-D:/Workspace/Discrete-Math/cmake-build-debug/CMakeFiles/rebuild_cache.dir

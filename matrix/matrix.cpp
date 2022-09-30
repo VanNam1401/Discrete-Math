@@ -41,7 +41,7 @@ void NhapMT(int a[][10], int &m, int &n) {
 //}
 //
 //void sxHangMT(int a[][10], int m, int n) {
-//    // chuyen mang -> vector
+//    //chuyen mang -> vector
 //    vector<vector<int>> vA;
 //    vA.resize(m);
 //    for (int i = 0; i < m; i++) {
