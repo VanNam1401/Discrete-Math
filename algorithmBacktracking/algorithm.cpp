@@ -5,27 +5,38 @@
 using namespace std;
 int n, X[10], D[10];
 
-void Xuat(int X, int n)
+void Nhap(int D[], int n)
 {
-    for (int i = 0; i <= n; ++i)
+    cout << "Nhap mang: ";
+    for (int i = 1; i <= n; i++)
+    {
+        cin >> D[i];
+    }
+}
+
+void Xuat(int X[], int n)
+{
+    for (int i = 1; i <= n; i++)
     {
         cout << X[i] << " ";
     }
+    cout << endl;
 }
 void khoiTao(int n)
 {
-    for (int i = 0; i <= n; i++)
+    for (int i = 1; i <= n; i++)
     {
         D[i] = 0;
     }
 }
-void hoanVi(int i)
+// hàm liệt kê các hoán vị của n số nguyên dương đầu tiên.
+void hoanVi(int i) // i = vị trí.
 {
-    for (int j = 0; j < n; j++)
+    for (int j = 1; j <= n; j++)
     {
         if (D[j] == 0)
         {
-            X[i] == j;
+            X[i] = j;
             D[j] = 1;
             if (i == n)
             {
@@ -42,5 +53,6 @@ void hoanVi(int i)
 int main()
 {
     cin >> n;
+   // Nhap(X, n);
     hoanVi(1);
 }
