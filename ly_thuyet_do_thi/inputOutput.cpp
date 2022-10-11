@@ -92,7 +92,7 @@ int main()
     BFS(1); // 1 là đỉnh bắt đầu
     int tplt = 0;
     duongdi(1, 5);
-    for (int i = 0; i <= n; i++)
+    for (int i = 1; i <= n; i++)
     {
         if (!daxet[i])
         {
@@ -101,8 +101,8 @@ int main()
         }
     }
     cout << "so tplt cua do thi la: " << tplt;
-    // BFS(i)
-    for (int i = 0; i <= n; i++)
+    // BFS(1)
+    for (int i = 2; i <= n; i++)
     {
         duongdi(1, i);
         cout << endl;
