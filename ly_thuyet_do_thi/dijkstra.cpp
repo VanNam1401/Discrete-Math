@@ -8,17 +8,17 @@ using namespace std;
 int n, e, s, f, L[10], T[max], Truoc[max], DT[max][max] = {(0, 0)};
 void nhapdothi()
 {
-    ifstream docfile("DOTHI.txt");
-    if (docfile.is_open())
+    ifstream dotfile("DOTHI.txt");
+    if (dotfile.is_open())
     {
         int d, c, t;
-        docfile >> n >> e;
+        dotfile >> n >> e;
         cout << "\n So dinh cua do thi: " << n;
         cout << "\n So canh cua do thi: " << e;
         cout << endl;
         for (int i = 1; i <= e; i++)
         {
-            docfile >> d >> c >> t;
+            dotfile >> d >> c >> t;
             DT[d][c] = DT[c][d] = t;
         }
     }

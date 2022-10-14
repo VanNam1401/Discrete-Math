@@ -86,25 +86,25 @@ int main()
     nhapDothi(A, n, e);
     inDothi(A, n);
     cout << endl;
-    // DFS(1);// 1 là đỉnh bắt đầu
-    // cout << endl;
-    // duongdi(1, 5);
-    BFS(1); // 1 là đỉnh bắt đầu
-    int tplt = 0;
+    DFS(1); // 1 là đỉnh bắt đầu
+    cout << endl;
     duongdi(1, 5);
-    for (int i = 1; i <= n; i++)
-    {
-        if (!daxet[i])
-        {
-            DFS(i);
-            tplt++;
-        }
-    }
-    cout << "so tplt cua do thi la: " << tplt;
-    // BFS(1)
-    for (int i = 2; i <= n; i++)
-    {
-        duongdi(1, i);
-        cout << endl;
-    }
+    // BFS(1); // 1 là đỉnh bắt đầu
+    // int tplt = 0;
+    // duongdi(1, 5);
+    // for (int i = 1; i <= n; i++)
+    // {
+    //     if (!daxet[i])
+    //     {
+    //         DFS(i);
+    //         tplt++;
+    //     }
+    // }
+    // cout << "so tplt cua do thi la: " << tplt;
+    // // BFS(1)
+    // for (int i = 2; i <= n; i++)
+    // {
+    //     duongdi(1, i);
+    //     cout << endl;
+    // }
 }
