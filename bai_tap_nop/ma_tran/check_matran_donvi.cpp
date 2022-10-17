@@ -1,8 +1,12 @@
 #include <iostream>
 using namespace std;
 
-void input(int arr[][10], int row, int col)
+void input(int arr[100][100], int &row, int &col)
 {
+  cout << "Nhap so hang: ";
+  cin >> row;
+  cout << "Nhap so cot: ";
+  cin >> col;
   for (int i = 0; i < row; i++)
   {
     for (int j = 0; j < col; j++)
@@ -11,7 +15,7 @@ void input(int arr[][10], int row, int col)
     }
   }
 }
-void output(int arr[][10], int row, int col)
+void output(int arr[100][100], int row, int col)
 {
   for (int i = 0; i < row; i++)
   {
@@ -22,7 +26,7 @@ void output(int arr[][10], int row, int col)
     cout << endl;
   }
 }
-bool chuyenViMatrix(int arr[][10], int row, int col)
+bool donViMatrix(int arr[][100], int row, int col)
 {
   if (row != col)
   {
@@ -53,13 +57,9 @@ bool chuyenViMatrix(int arr[][10], int row, int col)
 int main()
 {
   int row, col;
-  cout << "Nhap so hang: ";
-  cin >> row;
-  cout << "Nhap so cot: ";
-  cin >> col;
-  int arr[row][col];
+  int arr[100][100];
   input(arr, row, col);
   output(arr, row, col);
-  cout << chuyenViMatrix(arr, row, col);
+  cout << donViMatrix(arr, row, col);
   return 0;
 }
