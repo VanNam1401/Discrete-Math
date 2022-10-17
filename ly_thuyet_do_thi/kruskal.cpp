@@ -69,18 +69,6 @@ void sort(int e, Canh listCanh[max])
         }
     }
 }
-void tree(int s)
-{
-    cout << "\n Cay khung cua do thi gom cac canh:";
-    for (int i = 1; i <= n; i++)
-    {
-        if (i != s)
-        {
-            cout << "\n[" << i << "][" << KeT[i] << "]: " << KC[i];
-        }
-    }
-    cout << "\n tong do dai cay khung la: " << mT;
-}
 void kruskal(int n, int A[][max])
 {
     int eT = 0;
@@ -99,6 +87,18 @@ void kruskal(int n, int A[][max])
             }
         }
     }
+}
+void tree(int s)
+{
+    cout << "\n Cay khung cua do thi gom cac canh:";
+    for (int i = 1; i <= n; i++)
+    {
+        if (i != s)
+        {
+            cout << "\n[" << i << "][" << KeT[i] << "]: " << KC[i];
+        }
+    }
+    cout << "\n tong do dai cay khung la: " << mT;
 }
 int main()
 {

@@ -4,8 +4,8 @@ using namespace std;
 int main()
 {
     int a[5] = {1, 3, 5, 7, 9};
-    int b[5] = {1, 1, 1, 1, 1};
-    int s = 0, n = 5;
+    int b[5] = {1, 1, 1, 1, 1}; // mảng đánh dấu.
+    int s = 0, n = 5; // s: đếm số phần tử.
     for (int i = 0; i < n; i++)
     {
         if (b[i] == 1)

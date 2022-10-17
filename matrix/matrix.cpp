@@ -82,6 +82,6 @@ void NhapMT(int a[][10], int &m, int &n) {
 
 int main() {
     int m, n;
-    double a[10][10];
+    int a[10][10];
     NhapMT(a, m, n);
 }
