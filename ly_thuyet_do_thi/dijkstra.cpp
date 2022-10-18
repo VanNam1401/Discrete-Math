@@ -8,12 +8,12 @@ using namespace std;
 int n, e, s, f, L[10], T[max], Truoc[max], DT[max][max] = {(0, 0)};
 void nhapdothi()
 {
-    ifstream dotfile("DOTHI.txt");
+    ifstream dotfile("dothi2.txt");
     if (dotfile.is_open())
     {
         int d, c, t;
         dotfile >> n >> e;
-        cout << "\n So dinh cua do thi: " << n;
+        cout << " So dinh cua do thi: " << n;
         cout << "\n So canh cua do thi: " << e;
         cout << endl;
         for (int i = 1; i <= e; i++)

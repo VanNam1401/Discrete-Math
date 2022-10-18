@@ -1,106 +1,76 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <conio.h>
+#include <fstream>
+#include <limits.h>
 using namespace std;
- 
-// Number of vertices in the graph
-#define V 4
- 
-/* Define Infinite as a large enough
-value.This value will be used for
-vertices not connected to each other */
-#define INF 99999
- 
-// A function to print the solution matrix
-void printSolution(int dist[][V]);
- 
-// Solves the all-pairs shortest path
-// problem using Floyd Warshall algorithm
-void floydWarshall(int graph[][V])
+
+int n, e, b[7][7];
+void nhapDoThi()
 {
-    /* dist[][] will be the output matrix
-    that will finally have the shortest
-    distances between every pair of vertices */
-    int dist[V][V], i, j, k;
- 
-    /* Initialize the solution matrix same
-    as input graph matrix. Or we can say
-    the initial values of shortest distances
-    are based on shortest paths considering
-    no intermediate vertex. */
-    for (i = 0; i < V; i++)
-        for (j = 0; j < V; j++)
-            dist[i][j] = graph[i][j];
- 
-    /* Add all vertices one by one to
-    the set of intermediate vertices.
-    ---> Before start of an iteration,
-    we have shortest distances between all
-    pairs of vertices such that the
-    shortest distances consider only the
-    vertices in set {0, 1, 2, .. k-1} as
-    intermediate vertices.
-    ----> After the end of an iteration,
-    vertex no. k is added to the set of
-    intermediate vertices and the set becomes {0, 1, 2, ..
-    k} */
-    for (k = 0; k < V; k++) {
-        // Pick all vertices as source one by one
-        for (i = 0; i < V; i++) {
-            // Pick all vertices as destination for the
-            // above picked source
-            for (j = 0; j < V; j++) {
-                // If vertex k is on the shortest path from
-                // i to j, then update the value of
-                // dist[i][j]
-                if (dist[i][j] > (dist[i][k] + dist[k][j])
-                    && (dist[k][j] != INF
-                        && dist[i][k] != INF))
-                    dist[i][j] = dist[i][k] + dist[k][j];
+    ifstream dotfile("dothi2.txt");
+    if (dotfile.is_open())
+    {
+        int d, c, t;
+        dotfile >> n >> e;
+        cout << "\n So dinh cua do thi: " << n;
+        cout << "\n So canh cua do thi: " << e;
+        cout << endl;
+        for (int i = 1; i <= e; i++)
+        {
+            dotfile >> d >> c >> t;
+            b[d][c] = b[c][d] = t;
+        }
+    }
+    else
+    {
+        cout << "Chua mo duoc file";
+    }
+}
+void floyd(int b[][7])
+{
+    for (int k = 1; k <= n; k++)
+    {
+        for (int i = 1; i <= n; i++)
+        {
+            for (int j = 1; j <= n; j++)
+            {
+                if ((b[i][k] * b[k][j] != 0) && (i != j))
+                {
+                    if ((b[i][k] + b[k][j] < b[i][j]) || (b[i][j] == 0))
+                    {
+                        b[i][j] = b[i][k] + b[k][j];
+                    }
+                }
             }
         }
     }
- 
-    // Print the shortest distance matrix
-    printSolution(dist);
 }
- 
-/* A utility function to print solution */
-void printSolution(int dist[][V])
+void output(int b[][7])
 {
-    cout << "The following matrix shows the shortest "
-            "distances"
-            " between every pair of vertices \n";
-    for (int i = 0; i < V; i++) {
-        for (int j = 0; j < V; j++) {
-            if (dist[i][j] == INF)
-                cout << "INF"
-                     << "     ";
-            else
-                cout << dist[i][j] << "     ";
+    for (int i = 1; i <= n; i++)
+    {
+        for (int j = 1; j <= n; j++)
+        {
+            cout << b[i][j] << " ";
         }
         cout << endl;
     }
 }
- 
-// Driver's code
+// void duongdi(int s, int f)
+// {
+//     if (s == f)
+//     {
+//         cout << s;
+//     }
+//     else
+//     {
+//         duongdi(s, Truoc[f]);
+//         cout << "--> " << f;
+
 int main()
 {
-    /* Let us create the following weighted graph
-            10
-    (0)------->(3)
-        |     /|\
-    5 |     |
-        |     | 1
-    \|/     |
-    (1)------->(2)
-            3     */
-    int graph[V][V] = { { 0, 5, INF, 10 },
-                        { INF, 0, 3, INF },
-                        { INF, INF, 0, 1 },
-                        { INF, INF, INF, 0 } };
- 
-    // Function call
-    floydWarshall(graph);
-    return 0;
+    nhapDoThi();
+    output(b);
+    //floyd(b);
+    getch();
 }
- 
-// This code is contributed by Mythri J L

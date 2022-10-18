@@ -1,8 +1,8 @@
 #include <iostream>
 #define max 20
 using namespace std;
-int n, count, k, p[max], b[max];
-void nhap()
+int n, k, p[max], b[max];
+void input()
 {
   cout << "Nhap n: ";
   cin >> n;
@@ -12,7 +12,6 @@ void nhap()
   {
     b[i] = 1;
   }
-  count = 0;
 }
 void output()
 {
@@ -31,16 +30,20 @@ void chinhHop(int i)
       p[i] = j;
       b[j] = 0;
       if (i == k)
+      {
         output();
+      }
       else
-        Try(i + 1);
+      {
+        chinhHop(i + 1);
+      }
       b[j] = 1;
     }
   }
 }
 int main()
 {
-  nhap();
+  input();
   chinhHop(1);
   return 0;
 }
